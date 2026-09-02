@@ -1,0 +1,6 @@
+{
+  "name": "WellU - Student Life Companion",
+  "description": "Transforming Health - One Habit at a Time. Track fitness, monitor well-being, and celebrate every milestone.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
