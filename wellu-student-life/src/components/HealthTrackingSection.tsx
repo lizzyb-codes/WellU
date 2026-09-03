@@ -4,7 +4,6 @@ import {
   BookOpen, 
   CheckCircle2, 
   Smile, 
-  Maximize2,
 } from 'lucide-react';
 import { AnimatedTechGrid } from './AnimatedTechGrid';
 
@@ -152,147 +151,11 @@ export const HealthTrackingSection: React.FC = () => {
                              shadow-[0_30px_80px_rgba(15,23,42,0.4),0_10px_25px_rgba(0,0,0,0.25)]
                              border border-b-0 border-slate-700/80"
                 >
-
-                  {/* Webcam notch top-center */}
-                  <div className="absolute top-[6px] left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-950 border border-slate-700" />
-                    <div className="w-1 h-1 rounded-full bg-emerald-500/80" />
-                  </div>
-
-                  {/* Screen body (no bottom border, no bottom rounding) */}
-                  <div className="w-full
-                                  rounded-t-[14px] sm:rounded-t-[18px] rounded-b-none
-                                  bg-[#FAFBFD]
-                                  overflow-hidden flex flex-col
-                                  border border-b-0 border-slate-200
-                                  text-slate-900">
-
-                    {/* 1. Window title bar */}
-                    <div className="h-10 bg-slate-100/90 backdrop-blur-md border-b border-slate-200/80 px-4 flex items-center justify-between shrink-0">
-                      <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 rounded-full bg-rose-400 border border-rose-500/40" />
-                        <div className="w-3 h-3 rounded-full bg-amber-400 border border-amber-500/40" />
-                        <div className="w-3 h-3 rounded-full bg-emerald-400 border border-emerald-500/40" />
-                      </div>
-
-                      <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200/80 text-[11px] text-slate-600 font-medium w-64 sm:w-80 justify-center shadow-2xs">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <div className="w-32 h-2.5 bg-slate-200 rounded-full" />
-                      </div>
-
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-5 rounded-full bg-emerald-100/80" />
-                        <Maximize2 className="w-3.5 h-3.5 text-slate-400" />
-                      </div>
-                    </div>
-
-                    {/* 2. Dashboard grid */}
-                    <div className="flex flex-col md:flex-row min-h-[440px]">
-
-                      <div className="hidden md:flex w-16 bg-white border-r border-slate-100 p-3 flex-col items-center justify-between shrink-0">
-                        <div className="space-y-4">
-                          <div className="w-9 h-9 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-black text-[13px] shadow-sm">G</div>
-                          <div className="w-8 h-8 rounded-xl bg-emerald-50" />
-                          <div className="w-8 h-8 rounded-xl bg-slate-100" />
-                          <div className="w-8 h-8 rounded-xl bg-slate-100" />
-                          <div className="w-8 h-8 rounded-xl bg-slate-100" />
-                        </div>
-                        <div className="w-8 h-8 rounded-full bg-slate-200 border-2 border-emerald-400" />
-                      </div>
-
-                      <div className="flex-1 p-4 sm:p-6 space-y-4 bg-[#FAFBFD]">
-
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
-                          <div className="space-y-1.5">
-                            <div className="w-48 h-4 bg-slate-300/80 rounded-full" />
-                            <div className="w-72 h-2.5 bg-slate-200/80 rounded-full" />
-                          </div>
-                          <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl">
-                            <div className="w-20 h-6 bg-white rounded-lg shadow-2xs" />
-                            <div className="w-20 h-6 bg-transparent" />
-                            <div className="w-20 h-6 bg-transparent" />
-                          </div>
-                        </div>
-
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                          {['bg-rose-100', 'bg-emerald-100', 'bg-cyan-100', 'bg-amber-100'].map((dot, i) => (
-                            <div key={i} className="bg-white rounded-2xl p-4 border border-slate-100 shadow-2xs space-y-2">
-                              <div className="flex justify-between items-center">
-                                <div className="w-16 h-2 bg-slate-200 rounded-full" />
-                                <div className={`w-4 h-4 rounded-full ${dot}`} />
-                              </div>
-                              <div className="w-20 h-6 bg-slate-300 rounded-lg" />
-                              <div className="w-24 h-2 bg-emerald-200 rounded-full" />
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="bg-white rounded-2xl p-5 border border-slate-100 shadow-2xs">
-                          <div className="flex items-center justify-between mb-4">
-                            <div className="space-y-1">
-                              <div className="w-48 h-3.5 bg-slate-300 rounded-full" />
-                              <div className="w-64 h-2 bg-slate-200 rounded-full" />
-                            </div>
-                            <div className="w-28 h-5 bg-emerald-100/80 rounded-full" />
-                          </div>
-
-                          <div className="relative h-44 sm:h-52 w-full">
-                            <svg className="w-full h-full" viewBox="0 0 600 160" fill="none" preserveAspectRatio="none">
-                              <defs>
-                                <linearGradient id="blankPcChartGrad2" x1="0" y1="0" x2="0" y2="160" gradientUnits="userSpaceOnUse">
-                                  <stop offset="0%" stopColor="#22C55E" stopOpacity="0.25" />
-                                  <stop offset="60%" stopColor="#22C55E" stopOpacity="0.06" />
-                                  <stop offset="100%" stopColor="#22C55E" stopOpacity="0" />
-                                </linearGradient>
-                              </defs>
-                              <line x1="0" y1="35" x2="600" y2="35" stroke="#F1F5F9" strokeWidth="1" strokeDasharray="4 4" />
-                              <line x1="0" y1="75" x2="600" y2="75" stroke="#F1F5F9" strokeWidth="1" strokeDasharray="4 4" />
-                              <line x1="0" y1="115" x2="600" y2="115" stroke="#F1F5F9" strokeWidth="1" strokeDasharray="4 4" />
-                              <path d="M 0,130 L 45,115 L 90,95 L 140,55 L 190,75 L 240,40 L 290,58 L 340,30 L 390,48 L 440,24 L 490,42 L 540,28 L 600,20 L 600,160 L 0,160 Z" fill="url(#blankPcChartGrad2)" />
-                              <path d="M 0,130 L 45,115 L 90,95 L 140,55 L 190,75 L 240,40 L 290,58 L 340,30 L 390,48 L 440,24 L 490,42 L 540,28 L 600,20" stroke="#22C55E" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
-                              <circle cx="140" cy="55" r="3.5" fill="#16A34A" stroke="#FFFFFF" strokeWidth="1.5" />
-                              <circle cx="240" cy="40" r="3.5" fill="#16A34A" stroke="#FFFFFF" strokeWidth="1.5" />
-                              <circle cx="340" cy="30" r="4" fill="#15803D" stroke="#FFFFFF" strokeWidth="2" />
-                              <circle cx="440" cy="24" r="5" fill="#16A34A" stroke="#FFFFFF" strokeWidth="2" />
-                              <circle cx="540" cy="28" r="3.5" fill="#16A34A" stroke="#FFFFFF" strokeWidth="1.5" />
-                            </svg>
-                          </div>
-
-                          <div className="flex justify-between mt-3 pt-3 border-t border-slate-100">
-                            <div className="w-12 h-2 bg-slate-200 rounded-full" />
-                            <div className="w-12 h-2 bg-slate-200 rounded-full" />
-                            <div className="w-12 h-2 bg-slate-200 rounded-full" />
-                            <div className="w-12 h-2 bg-slate-200 rounded-full" />
-                            <div className="w-12 h-2 bg-slate-200 rounded-full" />
-                          </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-2">
-                          <div className="bg-emerald-50/80 rounded-2xl p-4 border border-emerald-200/80 flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-xl bg-emerald-500 shrink-0" />
-                            <div className="space-y-1 flex-1">
-                              <div className="w-36 h-3 bg-slate-800/80 rounded-full" />
-                              <div className="w-48 h-2 bg-slate-600/60 rounded-full" />
-                            </div>
-                          </div>
-                          <div className="bg-sky-50/80 rounded-2xl p-4 border border-sky-200/80 flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-xl bg-sky-500 shrink-0" />
-                            <div className="space-y-1 flex-1">
-                              <div className="w-36 h-3 bg-slate-800/80 rounded-full" />
-                              <div className="w-48 h-2 bg-slate-600/60 rounded-full" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="relative h-24 overflow-hidden rounded-2xl border border-slate-200/80 shadow-2xs">
-                          <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1000&q=80" alt="A calm wellness moment" className="h-full w-full object-cover" referrerPolicy="no-referrer" />
-                          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent" />
-                          <span className="absolute bottom-3 left-4 text-xs font-bold text-white">Make space for your next small win</span>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src="/dashboard.png"
+                    alt="Dashboard mockup"
+                    className="w-full h-auto object-cover rounded-t-[14px] sm:rounded-t-[18px]"
+                  />
                 </div>
 
                 {/* Extra soft fade band beneath the open bottom to blend into mint */}
