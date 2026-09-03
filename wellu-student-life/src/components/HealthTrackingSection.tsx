@@ -284,6 +284,12 @@ export const HealthTrackingSection: React.FC = () => {
                           </div>
                         </div>
 
+                        <div className="relative h-24 overflow-hidden rounded-2xl border border-slate-200/80 shadow-2xs">
+                          <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1000&q=80" alt="A calm wellness moment" className="h-full w-full object-cover" referrerPolicy="no-referrer" />
+                          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent" />
+                          <span className="absolute bottom-3 left-4 text-xs font-bold text-white">Make space for your next small win</span>
+                        </div>
+
                       </div>
                     </div>
                   </div>

@@ -8,6 +8,10 @@ const WellnessTips = lazy(() => import('./pages/WellnessTips'));
 const Affirmations = lazy(() => import('./pages/Affirmations'));
 const Login = lazy(() => import('./pages/Login'));
 const Signup = lazy(() => import('./pages/Signup'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const CalendarReminders = lazy(() => import('./pages/CalendarReminders'));
+const Profile = lazy(() => import('./pages/Profile'));
+const AICompanion = lazy(() => import('./pages/AICompanion'));
 
 
 function App() {
@@ -16,6 +20,10 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/calendar-reminders" element={<CalendarReminders />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/ai-companion" element={<AICompanion />} />
           <Route path="/mood-tracker" element={<MoodTracker />} />
           <Route path="/journal" element={<Journal />} />
           <Route path="/wellness-tips" element={<WellnessTips />} />

@@ -18,6 +18,7 @@ import {
 } from 'react-icons/fa';
 import Sidebar from '../components/Sidebar';
 import TopBar from '../components/TopBar';
+import PageAtmosphere from '../components/PageAtmosphere';
 
 interface JournalEntry {
   id: string;
@@ -30,6 +31,7 @@ interface JournalEntry {
 }
 
 const Journal: React.FC = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [entries, setEntries] = useState<JournalEntry[]>([
     {
       id: '1',
@@ -162,11 +164,12 @@ const Journal: React.FC = () => {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-50">
-      <Sidebar />
+    <div className="relative flex h-screen overflow-hidden bg-[#FAFBFD]">
+      <PageAtmosphere accent="cyan" />
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       <div className="flex-1 flex flex-col overflow-hidden">
-        <TopBar />
-        <main className="flex-1 overflow-y-auto p-6">
+        <TopBar onMenuClick={() => setIsSidebarOpen(true)} />
+        <main className="wellu-page-ridges wellu-dashboard-grid relative z-10 flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="flex items-start justify-between mb-8">
@@ -180,7 +183,7 @@ const Journal: React.FC = () => {
                   setNewEntry({ title: '', content: '', mood: 3, tags: '' });
                   setShowNewEntry(true);
                 }}
-                className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-green-500 to-yellow-400 text-white rounded-xl font-medium hover:shadow-lg hover:scale-[1.02] transition-all"
+                className="flex items-center gap-2 rounded-xl bg-linear-to-r from-green-500 to-yellow-400 px-6 py-3 font-medium text-white transition-all hover:scale-[1.02] hover:shadow-lg"
               >
                 <FaPlus />
                 New Entry
@@ -238,7 +241,7 @@ const Journal: React.FC = () => {
 
             {/* New Entry Form */}
             {showNewEntry && (
-              <div className="bg-white rounded-2xl shadow-lg border border-green-100 p-6 mb-6">
+              <div className="rounded-2xl border-2 border-dashed border-slate-300 bg-white p-6 shadow-sm mb-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-gray-800">
                     {editingEntry ? 'Edit Entry' : 'New Journal Entry'}
@@ -308,12 +311,12 @@ const Journal: React.FC = () => {
                   <div className="flex gap-3">
                     <button
                       onClick={editingEntry ? handleUpdateEntry : handleSaveEntry}
-                      className="flex-1 py-3 bg-linear-to-r from-green-500 to-yellow-400 text-white rounded-xl font-medium hover:shadow-lg transition-all"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-900 py-3 font-bold text-white transition-all hover:bg-slate-700 hover:shadow-lg"
                     >
-                      <span className="inline mr-2">
+                      <span className="flex h-6 w-6 items-center justify-center rounded-md bg-lime-300 text-slate-900">
                         <FaSave />
                       </span>
-                      {editingEntry ? 'Update Entry' : 'Save Entry'}
+                      {editingEntry ? 'Update' : 'Save'}
                     </button>
                     <button
                       onClick={handleCancelEntry}
@@ -343,12 +346,12 @@ const Journal: React.FC = () => {
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
                           {getMoodIcon(entry.mood)}
-                          <h3 className="text-lg font-semibold text-gray-800">{entry.title}</h3>
+                          <h3 className="text-xl font-semibold text-gray-800">{entry.title}</h3>
                           <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded-full">
                             {getMoodLabel(entry.mood)}
                           </span>
                         </div>
-                        <p className="text-gray-600 leading-relaxed mb-3">{entry.content}</p>
+                        <p className="text-base text-gray-700 leading-relaxed mb-3">{entry.content}</p>
                         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
                           <span className="flex items-center gap-1">
                             <FaCalendarAlt />

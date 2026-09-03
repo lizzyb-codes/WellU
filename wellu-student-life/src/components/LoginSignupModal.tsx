@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { X, CheckCircle2, Mail, Lock, User, Eye, EyeOff } from 'lucide-react';
 
 export type AuthMode = 'login' | 'signup';
@@ -10,6 +11,7 @@ interface LoginSignupModalProps {
 }
 
 export const LoginSignupModal: React.FC<LoginSignupModalProps> = ({ open, initialMode = 'login', onClose }) => {
+  const navigate = useNavigate();
   const [mode, setMode] = useState<AuthMode>(initialMode);
   const [showPw, setShowPw] = useState(false);
 
@@ -90,7 +92,9 @@ export const LoginSignupModal: React.FC<LoginSignupModalProps> = ({ open, initia
       setSuccess(true);
       window.setTimeout(() => {
         setSuccess(false);
-      }, 3500);
+        onClose();
+        navigate('/dashboard');
+      }, 1200);
     }, 800);
   };
 
@@ -141,8 +145,7 @@ export const LoginSignupModal: React.FC<LoginSignupModalProps> = ({ open, initia
             {/* Header */}
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-2">
-                <img src="/image-removebg-preview.png" alt="WellU Logo" className="w-14 h-14 object-contain" />
-                <span className="font-display font-black text-[27px] tracking-tight text-slate-900">WellU</span>
+                <img src="/wellu-logo.png" alt="WellU" className="h-12 w-auto object-contain" />
               </div>
               <h3 className="font-display font-black text-[26px] sm:text-[28px] tracking-[-0.02em] text-slate-900 leading-tight">
                 {mode === 'login' ? 'Log in to your account' : 'Create your WellU account'}

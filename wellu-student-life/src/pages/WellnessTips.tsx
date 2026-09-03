@@ -23,6 +23,7 @@ import {
 } from 'react-icons/fa';
 import Sidebar from '../components/Sidebar';
 import TopBar from '../components/TopBar';
+import PageAtmosphere from '../components/PageAtmosphere';
 
 interface WellnessTip {
   id: string;
@@ -36,6 +37,7 @@ interface WellnessTip {
 }
 
 const WellnessTips: React.FC = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [tips, setTips] = useState<WellnessTip[]>([
     {
       id: '1',
@@ -132,11 +134,12 @@ const WellnessTips: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-50">
-      <Sidebar />
+    <div className="relative flex h-screen overflow-hidden bg-[#FAFBFD]">
+      <PageAtmosphere accent="amber" />
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       <div className="flex-1 flex flex-col overflow-hidden">
-        <TopBar />
-        <main className="flex-1 overflow-y-auto p-6">
+        <TopBar onMenuClick={() => setIsSidebarOpen(true)} />
+        <main className="wellu-page-ridges wellu-dashboard-grid relative z-10 flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="mb-8">
@@ -164,9 +167,9 @@ const WellnessTips: React.FC = () => {
                     <button
                       key={category}
                       onClick={() => setSelectedCategory(category)}
-                      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap ${
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-all whitespace-nowrap ${
                         selectedCategory === category
-                          ? 'bg-green-100 text-green-600'
+                          ? 'bg-slate-900 text-white'
                           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                     >
@@ -175,7 +178,7 @@ const WellnessTips: React.FC = () => {
                   ))}
                   <button
                     onClick={() => setShowSavedOnly(!showSavedOnly)}
-                    className={`px-4 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
                       showSavedOnly
                         ? 'bg-yellow-100 text-yellow-600'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -204,7 +207,7 @@ const WellnessTips: React.FC = () => {
                 {filteredTips.map((tip) => (
                   <div
                     key={tip.id}
-                    className={`bg-linear-to-br ${tip.color} rounded-2xl shadow-sm hover:shadow-md transition-all p-6 border border-white/50`}
+                    className={`bg-linear-to-br ${tip.color} rounded-2xl shadow-sm hover:shadow-md transition-all p-7 border border-white/50`}
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -212,8 +215,8 @@ const WellnessTips: React.FC = () => {
                           {tip.icon}
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-800">{tip.title}</h3>
-                          <span className="text-xs text-gray-500">{tip.category}</span>
+                          <h3 className="text-xl font-bold leading-tight text-gray-800">{tip.title}</h3>
+                          <span className="text-base text-gray-500">{tip.category}</span>
                         </div>
                       </div>
                       <button
@@ -232,7 +235,7 @@ const WellnessTips: React.FC = () => {
                       </button>
                     </div>
                     
-                    <p className="text-gray-600 leading-relaxed mb-4">
+                    <p className="mb-5 text-lg leading-relaxed text-gray-700">
                       {tip.description}
                     </p>
                     

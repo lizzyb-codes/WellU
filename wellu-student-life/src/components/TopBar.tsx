@@ -17,38 +17,24 @@ const TopBar: React.FC<TopBarProps> = ({ onMenuClick }) => {
   };
 
   return (
-    <header className="bg-white border-b border-gray-100 px-4 sm:px-6 py-3 flex-shrink-0 relative z-30">
+    <header className="relative z-30 flex-shrink-0 border-b border-lime-100 bg-white/95 px-3 py-2.5 backdrop-blur sm:px-6 sm:py-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           {/* Hamburger Menu Button - Visible on mobile only */}
           <button
             onClick={handleMenuClick}
-            className="lg:hidden p-2 hover:bg-gray-100 rounded-xl transition-colors cursor-pointer"
+            className="cursor-pointer rounded-xl p-2 transition-colors hover:bg-gray-100 lg:hidden"
             aria-label="Toggle menu"
             type="button"
           >
-            <FaBars className="text-gray-600 text-xl" />
+            <FaBars className="text-xl text-gray-600" />
           </button>
           
           {/* Mobile Logo */}
           <Link to="/" className="lg:hidden flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-r from-green-500 to-yellow-400 flex items-center justify-center text-white font-bold text-xs">
-              W
-            </div>
-            <span className="text-lg font-bold bg-gradient-to-r from-green-500 to-yellow-400 bg-clip-text text-transparent">
-              WellU
-            </span>
+            <img src="/wellu-logo.png" alt="WellU" className="h-10 w-auto object-contain" />
           </Link>
 
-          {/* Desktop Logo */}
-          <Link to="/" className="hidden lg:flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500 to-yellow-400 flex items-center justify-center text-white font-bold text-sm">
-              W
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-green-500 to-yellow-400 bg-clip-text text-transparent">
-              WellU
-            </span>
-          </Link>
         </div>
 
         {/* Search - Hidden on mobile, visible on larger screens */}
@@ -70,15 +56,13 @@ const TopBar: React.FC<TopBarProps> = ({ onMenuClick }) => {
           </button>
           
           <button className="relative p-2 hover:bg-gray-100 rounded-xl transition-colors">
-            <FaBell className="text-gray-600 text-lg" />
+            <FaBell className="text-lg text-gray-600" />
             <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full ring-2 ring-white"></span>
           </button>
           
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="hidden sm:block text-sm text-gray-600">Today</span>
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-yellow-400 flex items-center justify-center text-white text-xs font-medium shadow-md">
-              A
-            </div>
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-xs font-bold text-gray-700 shadow-sm">A</div>
           </div>
         </div>
       </div>

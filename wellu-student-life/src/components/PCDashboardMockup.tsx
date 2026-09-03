@@ -112,6 +112,17 @@ export const PCDashboardMockup: React.FC<PCDashboardMockupProps> = ({ className 
                 </div>
               </div>
 
+              <div className="relative h-20 overflow-hidden rounded-xl border border-slate-100 shadow-2xs">
+                <img
+                  src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80"
+                  alt="A calm wellness moment"
+                  className="h-full w-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/55 to-transparent" />
+                <span className="absolute bottom-2 left-3 text-[9px] font-bold text-white">A five-minute reset</span>
+              </div>
+
             </div>
 
           </div>

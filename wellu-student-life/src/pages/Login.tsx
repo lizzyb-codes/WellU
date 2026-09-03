@@ -11,6 +11,7 @@ import {
   FaApple,
   FaArrowRight
 } from 'react-icons/fa';
+import PageAtmosphere from '../components/PageAtmosphere';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -32,18 +33,14 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-yellow-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#FAFBFD] p-4">
+      <PageAtmosphere accent="cyan" />
+      <div className="relative z-10 w-full max-w-5xl overflow-hidden rounded-3xl bg-white shadow-2xl flex flex-col md:flex-row">
         {/* Left Side - Form */}
         <div className="w-full md:w-1/2 p-8 md:p-12">
           {/* Logo */}
           <div className="flex items-center gap-2 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-green-500 to-yellow-400 flex items-center justify-center text-white font-bold text-lg">
-              W
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-green-500 to-yellow-400 bg-clip-text text-transparent">
-              WellU
-            </span>
+            <img src="/wellu-logo.png" alt="WellU" className="h-12 w-auto object-contain" />
           </div>
 
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h1>

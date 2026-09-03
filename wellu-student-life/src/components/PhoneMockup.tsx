@@ -131,6 +131,17 @@ export const PhoneMockup: React.FC = () => {
                       <div className="w-10 h-2 bg-slate-100 rounded-full" />
                     </div>
                   </div>
+
+                  <div className="relative h-16 overflow-hidden rounded-xl border border-slate-200/70">
+                    <img
+                      src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80"
+                      alt="Journal page"
+                      className="h-full w-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-slate-950/25" />
+                    <span className="absolute bottom-1.5 left-2 text-[8px] font-bold text-white">Make space to reflect</span>
+                  </div>
                 </div>
 
                 {/* Bottom Nav */}

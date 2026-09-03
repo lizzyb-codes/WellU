@@ -77,7 +77,7 @@ export const CleanFooter: React.FC = () => {
           {/* Brand */}
           <div className="col-span-2 space-y-4">
             <a href="#" className="inline-flex items-center gap-3.5 font-display text-[34px] font-black tracking-tight text-slate-900">
-              <img src="/image-removebg-preview.png" alt="WellU Logo" className="w-14 h-14 object-contain" />
+              <img src="/wellu-logo.png" alt="WellU" className="w-24 h-auto object-contain" />
               <span>WellU</span>
             </a>
 

@@ -45,8 +45,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onLogin, onSignup }) => {
               className="group flex items-center gap-3.5 font-display text-[30px] sm:text-[34px] font-black tracking-[-0.03em] text-[#0F172A] hover:opacity-90 transition-all"
             >
               <img 
-                src="/image-removebg-preview.png" 
-                alt="WellU Logo" 
+                src="/wellu-logo.png"
+                alt="WellU"
                 className="w-12 h-12 sm:w-14 sm:h-14 object-contain group-hover:scale-105 transition-transform"
               />
               <span>WellU</span>

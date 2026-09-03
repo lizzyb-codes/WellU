@@ -6,6 +6,10 @@
     color: #111827;
   }
 
+  body {
+    background-color: #fafbfd;
+  }
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
@@ -13,6 +17,11 @@
 
   h1, h2, h3, h4, .font-display {
     font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  .font-quote {
+    font-family: 'DM Serif Display', Georgia, serif;
+    letter-spacing: 0;
   }
 }
 
@@ -80,9 +89,89 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-purple-300 rounded-full;
+  @apply bg-gray-300 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-purple-400;
+  @apply bg-gray-400;
+}
+
+.wellu-page-ridges {
+  background-color: #fafbfd;
+}
+
+.wellu-dashboard-grid {
+  background-image:
+    linear-gradient(rgba(76, 173, 132, 0.085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(76, 173, 132, 0.085) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+}
+
+.wellu-ridged-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.wellu-ridged-panel::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 9px;
+  pointer-events: none;
+  opacity: 0.55;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 3px,
+    rgba(76, 173, 132, 0.12) 4px,
+    transparent 5px
+  );
+}
+
+.wellu-scallop-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.wellu-scallop-panel::before,
+.wellu-scallop-panel::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 12px;
+  pointer-events: none;
+  z-index: 2;
+  background-image: radial-gradient(circle at 10px 0, #fafbfd 0 7px, transparent 7.5px);
+  background-repeat: repeat-x;
+  background-size: 20px 12px;
+}
+
+.wellu-scallop-panel::before {
+  top: 0;
+}
+
+.wellu-scallop-panel::after {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.wellu-large-dashes {
+  border: 0;
+  background:
+    repeating-linear-gradient(90deg, #4CAD84 0 10px, transparent 10px 20px) top / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #4CAD84 0 10px, transparent 10px 20px) bottom / 100% 2px no-repeat,
+    repeating-linear-gradient(0deg, #4CAD84 0 10px, transparent 10px 20px) left / 2px 100% no-repeat,
+    repeating-linear-gradient(0deg, #4CAD84 0 10px, transparent 10px 20px) right / 2px 100% no-repeat,
+    #C4F7D7;
+}
+.affirmation-randomizing {
+  animation: affirmation-fade 420ms ease both;
+}
+
+@keyframes affirmation-fade {
+  0% { opacity: 1; transform: translateX(0); }
+  45% { opacity: 0.35; transform: translateX(10px) rotate(1deg); }
+  100% { opacity: 1; transform: translateX(0); }
 }

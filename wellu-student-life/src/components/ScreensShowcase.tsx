@@ -160,6 +160,8 @@ export const ScreensShowcase: React.FC = () => {
                       </div>
                     </div>
 
+                    <img src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?auto=format&fit=crop&w=600&q=80" alt="A restorative wellness moment" className="h-16 w-full rounded-xl object-cover" referrerPolicy="no-referrer" />
+
                     <div className="p-2.5 rounded-xl bg-slate-900 text-white text-[11.5px] flex items-center justify-between font-black">
                       <span>Resting Pulse: 52 bpm</span>
                       <Heart className="w-4 h-4 text-rose-400 fill-rose-400" />
@@ -226,6 +228,8 @@ export const ScreensShowcase: React.FC = () => {
                         <Moon className="w-3.5 h-3.5 text-purple-400" />
                       </div>
                     </div>
+
+                    <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=600&q=80" alt="A calm evening reflection" className="h-14 w-full rounded-xl object-cover opacity-90" referrerPolicy="no-referrer" />
 
                     <div className="p-2 rounded-xl bg-purple-600 text-white text-[10.5px] font-black text-center">
                       Sleep Readiness: 96% 🌙
