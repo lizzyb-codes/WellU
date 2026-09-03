@@ -1,0 +1,42 @@
+src/components/Sidebar.tsx(77,22): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/components/TopBar.tsx(30,21): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/components/TopBar.tsx(57,23): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/components/TopBar.tsx(69,23): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/components/TopBar.tsx(73,21): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/components/TopBar.tsx(89,21): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(179,8): error TS2739: Type '{}' is missing the following properties from type 'SidebarProps': isOpen, onClose
+src/pages/Affirmations.tsx(219,37): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(221,40): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(229,38): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(231,37): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(304,31): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(314,32): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(336,41): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(350,41): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(352,44): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(362,39): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(371,40): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(450,32): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Affirmations.tsx(485,33): error TS2322: Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IconBaseProps'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & IconBaseProps'.
+src/pages/Journal.tsx(166,8): error TS2739: Type '{}' is missing the following properties from type 'SidebarProps': isOpen, onClose
+src/pages/MoodTracker.tsx(41,8): error TS2739: Type '{}' is missing the following properties from type 'SidebarProps': isOpen, onClose
+src/pages/WellnessTips.tsx(136,8): error TS2739: Type '{}' is missing the following properties from type 'SidebarProps': isOpen, onClose
